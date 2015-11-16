@@ -10,13 +10,16 @@ __Idea:__ A web application for clubs and student organizations dedicated to fos
 
 __Models and Descriptions:__
 User
-* Has: name, email, position, year began, year ended, club status, (many) Comments
+* Has: name, email, position, year began, year ended, club status, (many) Posts, (many) Comments, (many) Tags
 
 Tag
 * Has: name, description, (many) Users
 
 Comment
-* Has: text, datetime, privacy, User A, User Bs
+* Has: text, datetime, (many) Tags, User, Post
+
+Post
+* Has: text, datetime, (many) Tags, User
 
 __Features:__
 * Users can log in, create comments directed to specific subsets of Users, choose and search for tags, create new tags

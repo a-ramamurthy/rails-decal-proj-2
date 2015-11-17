@@ -16,10 +16,10 @@ Tag
 * Has: name, description, (many) Users
 
 Comment
-* Has: text, (many) Tags, user_id, post_id
+* Has: body, user_id, post_id
 
 Post
-* Has: text, (many) Tags, user_id
+* Has: title, body, (many) Tags, user_id
 
 __Features:__
 * Users can log in, create comments directed to specific subsets of Users, choose and search for tags, create new tags

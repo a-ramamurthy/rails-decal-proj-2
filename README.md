@@ -10,7 +10,7 @@ __Idea:__ A web application for clubs and student organizations dedicated to fos
 
 __Models and Descriptions:__
 User
-* Has: name, email, position, year began, year ended, club status, (many) Posts, (many) Comments, (many) Tags
+* Has: name, email, year began, year ended, (many) Posts, (many) Comments, (many) Tags
 
 Tag
 * Has: name, description, (many) Users

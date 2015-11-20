@@ -4,5 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :posts
-  has_many :comments, through: :posts
+  has_many :comments, :through => :posts
+  has_and_belongs_to_many :tags
 end

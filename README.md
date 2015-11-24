@@ -1,36 +1,50 @@
-Rails Decal 2015: Project 2
-======
-__Title:__ Lum 
+Lum
+================
 
-__Team Members:__ Arun Ramamurthy, Akash Khosla, Han Chen, Kangsik Lee 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-__Demo Link:__  
+This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
+provided by the [RailsApps Project](http://railsapps.github.io/).
 
-__Idea:__ A web application for clubs and student organizations dedicated to fostering relationships between current organization members and organization alumni. Users can make and comment on posts and send private messages. Users are tagged with their current status, either member or alumni, which years they served for, and the projects and positions that are/were associated with them.
+Rails Composer is supported by developers who purchase our RailsApps tutorials.
 
-__Models and Descriptions:__
-User
-* Has: name, email, year-started, year-ended, (many) Posts, (many) Comments, (many) Tags
+Problems? Issues?
+-----------
 
-Tag
-* Has: name, description, (many) Users
+Need help? Ask on Stack Overflow with the tag 'railsapps.'
 
-Comment
-* Has: body, user_id, post_id
+Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
 
-Post
-* Has: title, body, (many) Tags, user_id
+If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
+and include the diagnostics.
 
-__Features:__
-* Users can log in, create comments directed to specific subsets of Users, choose and search for tags, create new tags
-* Tags can be searched to find all Users associated with that Tag 
+Ruby on Rails
+-------------
 
-__Division of Labor:__
-* Arun:
-* Akash:
-* Han:
-* Kangsik
+This application requires:
 
+- Ruby 2.1.5
+- Rails 4.2.1
 
+Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
 
+Getting Started
+---------------
 
+Documentation and Support
+-------------------------
+
+Issues
+-------------
+
+Similar Projects
+----------------
+
+Contributing
+------------
+
+Credits
+-------
+
+License
+-------

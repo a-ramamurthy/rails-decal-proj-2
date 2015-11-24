@@ -1,0 +1,234 @@
+
+
+Started GET "/" for 54.244.95.60 at 2015-11-24 05:27:38 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  .bundle/gems/activerecord-4.2.1/lib/active_record/migration.rb:393:in `check_pending!'
+  .bundle/gems/activerecord-4.2.1/lib/active_record/migration.rb:374:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:88:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  .bundle/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:59:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.1ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-11-24 05:27:39 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  .bundle/gems/activerecord-4.2.1/lib/active_record/migration.rb:393:in `check_pending!'
+  .bundle/gems/activerecord-4.2.1/lib/active_record/migration.rb:374:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:88:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  .bundle/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:59:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.0ms)
+  [1m[36m (9.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (6.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20151117000833)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117000833"]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddNameToUsers (20151117000836)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117000836"]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20151117010511)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117010511"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151117010754)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "user_id" integer, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117010754"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddYearStartedToUsers (20151117011342)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "year_started" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117011342"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddYearEndedToUsers (20151117011358)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "year_ended" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117011358"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTags (20151120031930)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151120031930"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 54.244.95.60 at 2015-11-24 05:28:32 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (3.9ms)
+  Rendered layouts/_navigation.html.erb (8.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 4231ms (Views: 4221.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/about" for 54.244.95.60 at 2015-11-24 05:28:39 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 114ms (Views: 113.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-11-24 05:28:41 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 149ms (Views: 136.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-11-24 05:28:48 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 192ms (Views: 190.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-11-24 05:28:51 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 105.7ms | ActiveRecord: 0.1ms)

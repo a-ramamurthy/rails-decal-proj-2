@@ -1,0 +1,9 @@
+<h3>Posts</h3>
+<% @posts.each do |post| %>
+
+<p>Post Title: <%= post.title %> </p>
+<p>Post Body: <%= post.body %> </p>
+	<p>------------------</p>
+<% end %>
+
+<%= button_to "New Post", new_path(), :class => "button small", :method => :get %>

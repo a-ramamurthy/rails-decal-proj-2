@@ -1,0 +1,8 @@
+<%= simple_form_for @post, :url => create_path(), :method => :post do |post|%>
+<%= post.input :title, label: "Title: " %>
+<%= post.input :body, label: "Body: " %>
+  <%= post.button :submit%>
+<% end %>
+
+
+

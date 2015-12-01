@@ -1722,3 +1722,2454 @@ Processing by PostsController#index as HTML
   Rendered layouts/_navigation.html.erb (6.4ms)
   Rendered layouts/_messages.html.erb (0.4ms)
 Completed 200 OK in 318ms (Views: 303.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 00:04:26 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 54.244.95.60 at 2015-12-01 00:04:29 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (41.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 145ms (Views: 143.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 54.244.95.60 at 2015-12-01 00:04:35 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s5LdgAo1+AYwnLdsWay1gXB5HEyJJm2UGLiy6mMpXnIZ0a7blAXke+Vj8HM1s85G8o22AoUButt5dz1na9EHAg==", "post"=>{"title"=>"ddddqqqq", "body"=>"ffff"}, "commit"=>"Create Post"}
+Unpermitted parameter: body
+Unpermitted parameter: title
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ddddqqqq"], ["body", "ffff"], ["created_at", "2015-12-01 00:04:35.269163"], ["updated_at", "2015-12-01 00:04:35.269163"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+Redirected to http://lum-146178.nitrousapp.com:3000/posts
+Completed 302 Found in 13ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/posts" for 54.244.95.60 at 2015-12-01 00:04:35 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 91.2ms | ActiveRecord: 0.2ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" DESC LIMIT 1[0m
+
+
+Started GET "/sign_up" for 54.244.95.60 at 2015-12-01 00:30:01 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ArgumentError (Invalid route name, already in use: 'posts' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  config/routes.rb:6:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+
+
+Started GET "/posts/sign_up" for 54.244.95.60 at 2015-12-01 00:30:12 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sign_up"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 11ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=sign_up):
+  app/controllers/posts_controller.rb:7:in `show'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 00:30:15 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation_links.html.erb (17.3ms)
+  Rendered layouts/_navigation.html.erb (18.6ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `page_path' for #<#<Class:0x007f35c1af5318>:0x007f35c1af4670>):
+    1: <%# add navigation links to this file %>
+    2: <li><%= link_to 'About', page_path('about') %></li>
+  app/views/layouts/_navigation_links.html.erb:2:in `_app_views_layouts__navigation_links_html_erb___2986380725114874737_69934432627000'
+  app/views/layouts/_navigation.html.erb:15:in `_app_views_layouts__navigation_html_erb___961185757033790337_69934432605080'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__593809862548354207_44268400'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.6ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 00:30:16 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation_links.html.erb (16.2ms)
+  Rendered layouts/_navigation.html.erb (17.1ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `page_path' for #<#<Class:0x007f35c1af5318>:0x000000054f08d0>):
+    1: <%# add navigation links to this file %>
+    2: <li><%= link_to 'About', page_path('about') %></li>
+  app/views/layouts/_navigation_links.html.erb:2:in `_app_views_layouts__navigation_links_html_erb___2986380725114874737_69934432627000'
+  app/views/layouts/_navigation.html.erb:15:in `_app_views_layouts__navigation_html_erb___961185757033790337_69934432605080'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__593809862548354207_44268400'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.8ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 00:30:27 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_navigation_links.html.erb (19.2ms)
+  Rendered layouts/_navigation.html.erb (20.2ms)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `page_path' for #<#<Class:0x007f35c20765f8>:0x007f35c20759c8>):
+    1: <%# add navigation links to this file %>
+    2: <li><%= link_to 'About', page_path('about') %></li>
+  app/views/layouts/_navigation_links.html.erb:2:in `_app_views_layouts__navigation_links_html_erb___2986380725114874737_69934432627000'
+  app/views/layouts/_navigation.html.erb:15:in `_app_views_layouts__navigation_html_erb___961185757033790337_69934432605080'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__593809862548354207_44268400'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 00:30:27 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation_links.html.erb (17.8ms)
+  Rendered layouts/_navigation.html.erb (18.7ms)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `page_path' for #<#<Class:0x007f35c20765f8>:0x007f35c1b237e0>):
+    1: <%# add navigation links to this file %>
+    2: <li><%= link_to 'About', page_path('about') %></li>
+  app/views/layouts/_navigation_links.html.erb:2:in `_app_views_layouts__navigation_links_html_erb___2986380725114874737_69934432627000'
+  app/views/layouts/_navigation.html.erb:15:in `_app_views_layouts__navigation_html_erb___961185757033790337_69934432605080'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__593809862548354207_44268400'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.2ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 00:30:29 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation_links.html.erb (26.6ms)
+  Rendered layouts/_navigation.html.erb (27.6ms)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `page_path' for #<#<Class:0x007f35c1af5318>:0x007f35b4914e70>):
+    1: <%# add navigation links to this file %>
+    2: <li><%= link_to 'About', page_path('about') %></li>
+  app/views/layouts/_navigation_links.html.erb:2:in `_app_views_layouts__navigation_links_html_erb___2986380725114874737_69934432627000'
+  app/views/layouts/_navigation.html.erb:15:in `_app_views_layouts__navigation_html_erb___961185757033790337_69934432605080'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__593809862548354207_44268400'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 00:30:30 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation_links.html.erb (18.1ms)
+  Rendered layouts/_navigation.html.erb (19.0ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `page_path' for #<#<Class:0x007f35c1af5318>:0x007f35b4e5e2f0>):
+    1: <%# add navigation links to this file %>
+    2: <li><%= link_to 'About', page_path('about') %></li>
+  app/views/layouts/_navigation_links.html.erb:2:in `_app_views_layouts__navigation_links_html_erb___2986380725114874737_69934432627000'
+  app/views/layouts/_navigation.html.erb:15:in `_app_views_layouts__navigation_html_erb___961185757033790337_69934432605080'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__593809862548354207_44268400'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.8ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 00:30:42 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation_links.html.erb (28.5ms)
+  Rendered layouts/_navigation.html.erb (29.4ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `page_path' for #<#<Class:0x007f35c1af5318>:0x007f35c12fd138>):
+    1: <%# add navigation links to this file %>
+    2: <li><%= link_to 'About', page_path('about') %></li>
+  app/views/layouts/_navigation_links.html.erb:2:in `_app_views_layouts__navigation_links_html_erb___2986380725114874737_69934432627000'
+  app/views/layouts/_navigation.html.erb:15:in `_app_views_layouts__navigation_html_erb___961185757033790337_69934432605080'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__593809862548354207_44268400'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.3ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 00:30:42 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation_links.html.erb (16.8ms)
+  Rendered layouts/_navigation.html.erb (17.6ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `page_path' for #<#<Class:0x007f35c1af5318>:0x007f35c1325728>):
+    1: <%# add navigation links to this file %>
+    2: <li><%= link_to 'About', page_path('about') %></li>
+  app/views/layouts/_navigation_links.html.erb:2:in `_app_views_layouts__navigation_links_html_erb___2986380725114874737_69934432627000'
+  app/views/layouts/_navigation.html.erb:15:in `_app_views_layouts__navigation_html_erb___961185757033790337_69934432605080'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__593809862548354207_44268400'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.2ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 00:32:29 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ArgumentError (Invalid route name, already in use: 'posts' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  config/routes.rb:6:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.8ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 00:32:29 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (26.9ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `new_path' for #<#<Class:0x00000003706090>:0x000000036e6290>):
+    6: 	<p>------------------</p>
+    7: <% end %>
+    8: 
+    9: <%= button_to "New Post", new_path(), :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:9:in `_app_views_posts_index_html_erb__1263259693127876293_44316580'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (47.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.3ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:25:45 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (3.7ms)
+  Rendered layouts/_navigation.html.erb (6.9ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 362ms (Views: 348.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 01:25:48 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 151ms (Views: 140.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 01:25:51 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:25:52 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:33:59 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 100.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 01:35:22 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 96.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/about" for 54.244.95.60 at 2015-12-01 01:42:27 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:42:30 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 91ms (Views: 90.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/about" for 54.244.95.60 at 2015-12-01 01:42:33 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 102.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 01:42:34 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (12.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 01:42:35 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 107ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 54.244.95.60 at 2015-12-01 01:42:48 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:42:49 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 88ms (Views: 87.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/about" for 54.244.95.60 at 2015-12-01 01:42:50 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 96ms (Views: 95.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 01:42:50 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 89ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 01:42:51 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 54.244.95.60 at 2015-12-01 01:42:52 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 98ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:42:52 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 98.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/new" for 54.244.95.60 at 2015-12-01 01:42:59 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.9ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:43:14 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 110.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/new" for 54.244.95.60 at 2015-12-01 01:43:16 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.6ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:43:30 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/nitrous/rails-decal-proj-2/app/views/posts/index.html.erb:8: syntax error, unexpected '<'
+  <%= button_to "Edit", "edit", ...
+   ^
+/home/nitrous/rails-decal-proj-2/app/views/posts/index.html.erb:8: syntax error, unexpected ',', expecting keyword_end
+...dit", :class => "button small", :method => :get 
+...                               ^):
+  app/views/posts/index.html.erb:8: syntax error, unexpected '<'
+  app/views/posts/index.html.erb:8: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.3ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:44:29 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/nitrous/rails-decal-proj-2/app/views/posts/index.html.erb:8: syntax error, unexpected '<'
+  <%= button_to "Edit", "edit", ...
+   ^
+/home/nitrous/rails-decal-proj-2/app/views/posts/index.html.erb:8: syntax error, unexpected ',', expecting keyword_end
+...dit", :class => "button small", :method => :get 
+...                               ^):
+  app/views/posts/index.html.erb:8: syntax error, unexpected '<'
+  app/views/posts/index.html.erb:8: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[36m (9.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (5.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20151117000833)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (9.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117000833"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddNameToUsers (20151117000836)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (11.7ms)[0m  [1mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117000836"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20151117010511)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117010511"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151117010754)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "user_id" integer, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117010754"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddYearStartedToUsers (20151117011342)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "year_started" integer[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117011342"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddYearEndedToUsers (20151117011358)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "year_ended" integer[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117011358"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTags (20151120031930)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151120031930"]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "user@example.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "user@example.com"], ["encrypted_password", "$2a$10$7cuFeK4vXhlSooUtnI2YYeiUIYZga.sIhVRNXJWw1cSht/8VCDFgi"], ["created_at", "2015-12-01 01:48:22.742760"], ["updated_at", "2015-12-01 01:48:22.742760"]]
+  [1m[35m (5.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Squirtle"], ["body", "co"], ["user_id", 1], ["created_at", "2015-12-01 01:48:22.759352"], ["updated_at", "2015-12-01 01:48:22.759352"]]
+  [1m[36m (11.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Charmander"], ["body", "co"], ["user_id", 1], ["created_at", "2015-12-01 01:48:22.776568"], ["updated_at", "2015-12-01 01:48:22.776568"]]
+  [1m[35m (4.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Bulbasaur"], ["body", "co"], ["user_id", 1], ["created_at", "2015-12-01 01:48:22.783606"], ["updated_at", "2015-12-01 01:48:22.783606"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Pikachu"], ["body", "co"], ["user_id", 1], ["created_at", "2015-12-01 01:48:22.790589"], ["updated_at", "2015-12-01 01:48:22.790589"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:48:40 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/nitrous/rails-decal-proj-2/app/views/posts/index.html.erb:8: syntax error, unexpected '<'
+  <%= button_to "Edit", "edit", ...
+   ^
+/home/nitrous/rails-decal-proj-2/app/views/posts/index.html.erb:8: syntax error, unexpected ',', expecting keyword_end
+...dit", :class => "button small", :method => :get 
+...                               ^):
+  app/views/posts/index.html.erb:8: syntax error, unexpected '<'
+  app/views/posts/index.html.erb:8: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:50:03 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 123ms (Views: 121.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:50:08 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 01:50:10 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 115ms (Views: 113.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 01:50:13 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 99.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 54.244.95.60 at 2015-12-01 01:50:36 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mjvZaC6zl3GdfM9m5TkpAWfQorjVgU1QwLcRXZAPL3UweKozsIOLDEiDiHmJJlLG5SQI9tmmmh+heJ7QmPd2BQ==", "user"=>{"name"=>"kevin", "email"=>"kleekich@berkeley.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: name
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'kleekich@berkeley.edu' LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "kleekich@berkeley.edu"], ["encrypted_password", "$2a$10$NkM7MzC8V3DwBgGV/kHgUuOWO27qA61tvbKlBdtRAiKR6yMOaty7O"], ["created_at", "2015-12-01 01:50:36.286666"], ["updated_at", "2015-12-01 01:50:36.286666"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-12-01 01:50:36.295730"], ["current_sign_in_at", "2015-12-01 01:50:36.295730"], ["last_sign_in_ip", "136.152.142.34"], ["current_sign_in_ip", "136.152.142.34"], ["sign_in_count", 1], ["updated_at", "2015-12-01 01:50:36.296491"], ["id", 2]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://lum-146178.nitrousapp.com:3000/
+Completed 302 Found in 129ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:50:36 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 216ms (Views: 215.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/new" for 54.244.95.60 at 2015-12-01 01:50:40 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.8ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:51:52 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/new" for 54.244.95.60 at 2015-12-01 01:51:53 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.8ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:51:58 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 54.244.95.60 at 2015-12-01 01:52:00 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/new.html.erb within layouts/application (28.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 129.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for 54.244.95.60 at 2015-12-01 01:52:06 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RQtFEkGrf2rvkKSRns528XFbiAfjrMNpp8XFsHohOwbvSDZJ35tjFzpv447y0Q02868iSe+LFCbGCko9ctlidg==", "post"=>{"title"=>"123123", "body"=>""}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Unpermitted parameter: body
+Unpermitted parameter: title
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+ActionView::MissingTemplate (Missing template posts/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/nitrous/rails-decal-proj-2/app/views"
+  * "/home/nitrous/rails-decal-proj-2/.bundle/gems/devise-3.5.2/app/views"
+):
+  .bundle/gems/actionview-4.2.1/lib/action_view/path_set.rb:46:in `find'
+  .bundle/gems/actionview-4.2.1/lib/action_view/lookup_context.rb:121:in `find'
+  .bundle/gems/actionview-4.2.1/lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  .bundle/gems/actionview-4.2.1/lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  .bundle/gems/actionview-4.2.1/lib/action_view/renderer/template_renderer.rb:8:in `render'
+  .bundle/gems/actionview-4.2.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+  .bundle/gems/actionview-4.2.1/lib/action_view/renderer/renderer.rb:23:in `render'
+  .bundle/gems/actionview-4.2.1/lib/action_view/rendering.rb:100:in `_render_template'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  .bundle/gems/actionview-4.2.1/lib/action_view/rendering.rb:83:in `render_to_body'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  .bundle/gems/actionpack-4.2.1/lib/abstract_controller/rendering.rb:25:in `render'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/rendering.rb:16:in `render'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/opt/rbenv/versions/2.1.5/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  .bundle/gems/activerecord-4.2.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  .bundle/gems/actionpack-4.2.1/lib/abstract_controller/base.rb:198:in `process_action'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  .bundle/gems/actionpack-4.2.1/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:117:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:117:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:505:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:505:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  .bundle/gems/actionpack-4.2.1/lib/abstract_controller/callbacks.rb:19:in `process_action'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/notifications.rb:164:in `block in instrument'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/notifications.rb:164:in `instrument'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  .bundle/gems/activerecord-4.2.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  .bundle/gems/actionpack-4.2.1/lib/abstract_controller/base.rb:137:in `process'
+  .bundle/gems/actionview-4.2.1/lib/action_view/rendering.rb:30:in `process'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal.rb:196:in `dispatch'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  .bundle/gems/actionpack-4.2.1/lib/action_controller/metal.rb:237:in `block in action'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/routing/route_set.rb:74:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/journey/router.rb:30:in `each'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/journey/router.rb:30:in `serve'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/routing/route_set.rb:819:in `call'
+  .bundle/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+  .bundle/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+  .bundle/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/conditionalget.rb:38:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/flash.rb:260:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+  .bundle/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  .bundle/gems/activerecord-4.2.1/lib/active_record/query_cache.rb:36:in `call'
+  .bundle/gems/activerecord-4.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  .bundle/gems/activerecord-4.2.1/lib/active_record/migration.rb:378:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:88:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  .bundle/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:59:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (21.0ms)
+
+
+Started POST "/posts" for 54.244.95.60 at 2015-12-01 01:52:10 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RQtFEkGrf2rvkKSRns528XFbiAfjrMNpp8XFsHohOwbvSDZJ35tjFzpv447y0Q02868iSe+LFCbGCko9ctlidg==", "post"=>{"title"=>"123123", "body"=>"1231415"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Unpermitted parameter: body
+Unpermitted parameter: title
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "123123"], ["body", "1231415"], ["created_at", "2015-12-01 01:52:10.796596"], ["updated_at", "2015-12-01 01:52:10.796596"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+Redirected to http://lum-146178.nitrousapp.com:3000/posts
+Completed 302 Found in 14ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/posts" for 54.244.95.60 at 2015-12-01 01:52:10 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_23258200'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_23258200'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" DESC LIMIT 1[0m
+
+
+Started POST "/posts" for 54.244.95.60 at 2015-12-01 01:55:52 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RQtFEkGrf2rvkKSRns528XFbiAfjrMNpp8XFsHohOwbvSDZJ35tjFzpv447y0Q02868iSe+LFCbGCko9ctlidg==", "post"=>{"title"=>"123123", "body"=>"1231415"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Unpermitted parameter: body
+Unpermitted parameter: title
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "123123"], ["body", "1231415"], ["user_id", 2], ["created_at", "2015-12-01 01:55:52.750555"], ["updated_at", "2015-12-01 01:55:52.750555"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+Redirected to http://lum-146178.nitrousapp.com:3000/posts
+Completed 302 Found in 62ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/posts" for 54.244.95.60 at 2015-12-01 01:55:52 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_23258200'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_23258200'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:55:57 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_23258200'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_23258200'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:57:10 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (80.4ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 4.5ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338018357760'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338018357760'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (43.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (176.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:57:11 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_23258200'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_23258200'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.8ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (43.8ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.8ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (129.3ms)
+
+
+Started GET "/posts" for 54.244.95.60 at 2015-12-01 01:57:19 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_23258200'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_23258200'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.8ms)
+
+
+Started GET "/new" for 54.244.95.60 at 2015-12-01 01:57:26 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (142.4ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:57:28 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.9ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:57:36 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.8ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 01:57:43 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.7ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:00:32 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.7ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:00:34 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:00:36 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.2ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:00:39 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.email  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338018039440'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.7ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:01:26 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.id  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338018445360'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338018445360'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:01:39 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3: 
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user.id  %>
+    7:   <% if current_user == post.user %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+  app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338026194260'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338026194260'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.7ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:02:18 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/destroy" for 54.244.95.60 at 2015-12-01 02:02:49 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/destroy"):
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 02:08:02 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (23.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://lum-146178.nitrousapp.com:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 356ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:08:03 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/index.html.erb within layouts/application (100.6ms)
+  Rendered layouts/_navigation_links.html.erb (16.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (8.3ms)
+  Rendered layouts/_navigation.html.erb (41.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 853ms (Views: 838.3ms | ActiveRecord: 0.8ms)
+  [1m[36m (8.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (5.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20151117000833)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117000833"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddNameToUsers (20151117000836)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.8ms)[0m  [1mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117000836"]]
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20151117010511)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117010511"]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151117010754)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "user_id" integer, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117010754"]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddYearStartedToUsers (20151117011342)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "year_started" integer[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117011342"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddYearEndedToUsers (20151117011358)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "year_ended" integer[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151117011358"]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTags (20151120031930)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151120031930"]]
+  [1m[36m (4.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "user@example.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "user@example.com"], ["encrypted_password", "$2a$10$W3u930vcIPiLatO3Kn9IiOI1xYRvg4KOz89lcjWsu/NPBHQ.IP8TK"], ["created_at", "2015-12-01 02:08:44.530511"], ["updated_at", "2015-12-01 02:08:44.530511"]]
+  [1m[35m (5.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "User1"], ["body", "co"], ["user_id", 1], ["created_at", "2015-12-01 02:08:44.549376"], ["updated_at", "2015-12-01 02:08:44.549376"]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "User2"], ["body", "coca"], ["user_id", 2], ["created_at", "2015-12-01 02:08:44.559554"], ["updated_at", "2015-12-01 02:08:44.559554"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "User3"], ["body", "cola"], ["user_id", 3], ["created_at", "2015-12-01 02:08:44.568018"], ["updated_at", "2015-12-01 02:08:44.568018"]]
+  [1m[36m (6.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "User4"], ["body", "coca-cola"], ["user_id", 4], ["created_at", "2015-12-01 02:08:44.578077"], ["updated_at", "2015-12-01 02:08:44.578077"]]
+  [1m[35m (5.0ms)[0m  commit transaction
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:08:48 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (25.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 148ms (Views: 139.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:08:56 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 123.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 02:09:03 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 133ms (Views: 126.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:09:06 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 122.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:09:58 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user_id %></p>
+    7: <% if current_user.id == post.user_id %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+   10:   <% end %>
+  app/views/posts/index.html.erb:7:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338022272060'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338022272060'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.8ms)
+
+
+Started GET "/posts" for 54.244.95.60 at 2015-12-01 02:10:05 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user_id %></p>
+    7: <% if current_user.id == post.user_id %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+   10:   <% end %>
+  app/views/posts/index.html.erb:7:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338022272060'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338022272060'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.2ms)
+
+
+Started GET "/posts" for 54.244.95.60 at 2015-12-01 02:10:59 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 119ms (Views: 118.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:11:05 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 141ms (Views: 140.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 02:11:12 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 170ms (Views: 169.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 54.244.95.60 at 2015-12-01 02:11:38 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ThTAQSGvQQUFGeD64erc/7DlSSJDzMDNLTQRde43MPrkV7Mav59deNDmp+WN9ac4MhHjbE/rF4JM+5745s9pig==", "user"=>{"email"=>"kleekich@berkeley.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "kleekich@berkeley.edu"]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.9ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ThTAQSGvQQUFGeD64erc/7DlSSJDzMDNLTQRde43MPrkV7Mav59deNDmp+WN9ac4MhHjbE/rF4JM+5745s9pig==", "user"=>{"email"=>"kleekich@berkeley.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 199ms (Views: 113.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 54.244.95.60 at 2015-12-01 02:11:42 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 54.244.95.60 at 2015-12-01 02:11:53 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ID1wSDCiI9At977bfGgS4rTQZWavdCzxjLcGYsBEH4uKfgMTrpI/rfgI+cQQd2klNiTPKKNT+77teInvyLxG+w==", "user"=>{"name"=>"kevin", "email"=>"kleekich@berkeley.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: name
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'kleekich@berkeley.edu' LIMIT 1
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "kleekich@berkeley.edu"], ["encrypted_password", "$2a$10$06SYRUnVW9xxlxW2XNzLKO7xuOkosk.VC5sXGEN5SwLzMu93LuYCm"], ["created_at", "2015-12-01 02:11:54.009239"], ["updated_at", "2015-12-01 02:11:54.009239"]]
+  [1m[35m (5.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-12-01 02:11:54.020573"], ["current_sign_in_at", "2015-12-01 02:11:54.020573"], ["last_sign_in_ip", "136.152.142.34"], ["current_sign_in_ip", "136.152.142.34"], ["sign_in_count", 1], ["updated_at", "2015-12-01 02:11:54.021348"], ["id", 2]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://lum-146178.nitrousapp.com:3000/
+Completed 302 Found in 140ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:11:54 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 212ms (Views: 211.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:12:56 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4: <p>Post Title: <%= post.title %> </p>
+    5: <p>Post Body: <%= post.body %> </p>
+    6: <p>User: <%=post.user_id %></p>
+    7: <% if current_user.id == post.user_id %>
+    8:     <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    9:     <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+   10:   <% end %>
+  app/views/posts/index.html.erb:7:in `block in _app_views_posts_index_html_erb___3512503236686170469_70338023659520'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___3512503236686170469_70338023659520'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:13:15 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 120.5ms | ActiveRecord: 0.2ms)
+  [1m[35mPost Load (106.5ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" DESC LIMIT 1
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:17:48 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 99.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:17:56 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 104.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 54.244.95.60 at 2015-12-01 02:18:01 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (0.8ms)
+  Rendered users/_user.html.erb (0.2ms)
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 128ms (Views: 125.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/edit" for 54.244.95.60 at 2015-12-01 02:18:12 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 122.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pages/about" for 54.244.95.60 at 2015-12-01 02:18:15 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 109.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:18:16 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 110ms (Views: 109.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:18:24 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:19:55 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 109.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:20:07 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 117ms (Views: 116.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:20:09 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 121ms (Views: 119.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:20:15 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 111ms (Views: 110.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 54.244.95.60 at 2015-12-01 02:20:26 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sVlqyWaCoo8BhXNNKK++dS4yQsID/8wyJh4BLLtmUsobGhmS+LK+8tR6NFJEsMWyrMbojA/YG31H0Y6hs54Lug=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://lum-146178.nitrousapp.com:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:20:26 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 119.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:21:03 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 120.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:21:31 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 107.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:21:33 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:22:10 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 119ms (Views: 117.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:22:59 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 110.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/edit" for 54.244.95.60 at 2015-12-01 02:23:07 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/edit"):
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  .bundle/gems/web-console-2.2.1/lib/web_console/middleware.rb:31:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `block in call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/tagged_logging.rb:68:in `tagged'
+  .bundle/gems/railties-4.2.1/lib/rails/rack/logger.rb:20:in `call'
+  .bundle/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  .bundle/gems/activesupport-4.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/static.rb:113:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/engine.rb:518:in `call'
+  .bundle/gems/railties-4.2.1/lib/rails/application.rb:164:in `call'
+  .bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:541:in `handle_request'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:388:in `process_client'
+  .bundle/gems/puma-2.15.3/lib/puma/server.rb:270:in `block in run'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `call'
+  .bundle/gems/puma-2.15.3/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered .bundle/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.7ms)
+
+
+Started GET "/users/sign_in" for 54.244.95.60 at 2015-12-01 02:23:11 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 121.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 54.244.95.60 at 2015-12-01 02:23:15 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJT+o8+HxRAJJMuKzV5+Xxb6Jm7ZKXXF43IE44nCRs276Gbca5bT3X2CCow8utSAXcNE76PRjsCo91QrVwjFDw==", "user"=>{"email"=>"kleekich@berkeley.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "kleekich@berkeley.edu"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2015-12-01 02:23:15.934162"], ["sign_in_count", 2], ["updated_at", "2015-12-01 02:23:15.935464"], ["id", 2]]
+  [1m[35m (6.3ms)[0m  commit transaction
+Redirected to http://lum-146178.nitrousapp.com:3000/
+Completed 302 Found in 102ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:23:15 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 147ms (Views: 145.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:25:19 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 127.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:25:37 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 54.244.95.60 at 2015-12-01 02:25:41 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3uGCTyjLZJiWQ3k8rCXEIENGk88gzNc6W8aVcCJZQRN4WWx+lGlyY3zcuAUYoBU+mqpb+1JgXku9XPEh6voAhw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://lum-146178.nitrousapp.com:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:25:41 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 113ms (Views: 112.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:25:43 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:25:45 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 106.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.244.95.60 at 2015-12-01 02:26:36 +0000
+Cannot render console from 54.244.95.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 123ms (Views: 122.1ms | ActiveRecord: 0.5ms)

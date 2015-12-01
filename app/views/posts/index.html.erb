@@ -3,6 +3,11 @@
 
 <p>Post Title: <%= post.title %> </p>
 <p>Post Body: <%= post.body %> </p>
+<p>User: <%=post.user_id %></p>
+<% if current_user == post.user %>
+    <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+    <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+<% end %>
 	<p>------------------</p>
 <% end %>
 

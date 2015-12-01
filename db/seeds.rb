@@ -8,6 +8,8 @@
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
-%w(Squirtle Charmander Bulbasaur Pikachu).each do |name|
-  Post.create title: name, body: "co", user_id: 100
-end
+Post.create title: "User1", body: "co", user_id: 1
+Post.create title: "User2", body: "coca", user_id: 2
+Post.create title: "User3", body: "cola", user_id: 3
+Post.create title: "User4", body: "coca-cola", user_id: 4
+

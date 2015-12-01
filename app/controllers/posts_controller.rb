@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-  end
+  end 
 
   def new
     @post = current_user.posts.build

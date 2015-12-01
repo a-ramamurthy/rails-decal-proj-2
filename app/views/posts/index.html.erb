@@ -7,7 +7,7 @@
 
   <% if current_user == post.user %>
       <%= button_to "Edit", edit_post_path(post), :class => "button small", :method => :get %>
-      <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
+      <%= button_to "Destory", posts_path(post), :class => "button small", :method => :delete %>
   <% end %>
   	<p>------------------</p>
 <% end %>

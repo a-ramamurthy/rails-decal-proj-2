@@ -34,15 +34,17 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.update(post_params)
-    redirect_to show_path(@post)
+    redirect_to post_path(@post)
   end
 
-  def delete
-
+  def destroy
+      @post = Post.find(params[:id])
+      @post.destroy
+      redirect_to posts_path
   end
 
   def post_params
-    params.require(:post).permit(:title)
-    params.require(:post).permit(:body)
+    params.require(:post).permit(:title, :body)
+    
  	end
 end

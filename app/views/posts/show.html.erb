@@ -1,4 +1,4 @@
-<h1><%= @post.title %></h1>
+<h1><%= @post.title %><%= link_to "back", posts_path %></h1>
 <p><%= @post.body %></p>
 <p>posted by: <%= @post.user.email %> | posted at: <%= @post.created_at %></p>
 <% if current_user == @post.user %>

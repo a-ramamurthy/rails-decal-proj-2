@@ -1,6 +1,6 @@
 <h1>Edit Post for <%= params[:id] %> <%= link_to "back", posts_path %></h1>
 
-<%= simple_form_for @post, :url => create_path(), :method => :post do |post|%>
+<%= simple_form_for @post, :url => update_post_path(@post), :method => :put do |post|%>
 <%= post.input :title, label: "Title: " %>
 <%= post.input :body, label: "Body: " %>
   <%= post.button :submit%>

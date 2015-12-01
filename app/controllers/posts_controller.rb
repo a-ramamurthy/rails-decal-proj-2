@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-  end 
+  end
 
   def new
     @post = current_user.posts.build
@@ -27,7 +27,14 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
+    render "edit"
+  end
 
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    redirect_to show_path(@post)
   end
 
   def delete

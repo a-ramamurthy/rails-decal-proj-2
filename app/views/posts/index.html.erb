@@ -2,13 +2,14 @@
 <% @posts.each do |post| %>
 
   <p>Title: <%= link_to post.title, post %> </p>
-  <p>Post Body: <%= post.body %> </p>
-  <p>User: <%=post.user.email %></p>
+  <p><%= post.body %> </p>
+  <p>post by: <%=post.user.email %> | post at: <%=post.user.created_at %></p>
+
   <% if current_user == post.user %>
-      <%= button_to "Edit", "edit", :class => "button small", :method => :get %>
+      <%= button_to "Edit", edit_post_path(post), :class => "button small", :method => :get %>
       <%= button_to "Destory", "destroy", :class => "button small", :method => :get %>
   <% end %>
   	<p>------------------</p>
-<% end %> 
+<% end %>
 
 <%= button_to "New Post", new_path(), :class => "button small", :method => :get %>

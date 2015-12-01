@@ -1,3 +1,6 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.body %></p>
 <p>posted by: <%= @post.user.email %> | posted at: <%= @post.created_at %></p>
+<% if current_user == @post.user %>
+  <%= button_to "Edit", edit_post_path(@post), :class => "button small", :method => :get %>
+<% end %>

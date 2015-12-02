@@ -4,7 +4,7 @@
   <p>Title: <%= link_to post.title, post %> </p>
   <p><%= post.body %> </p>
   <p>post by: <%=post.user.email %> | post at: <%=post.user.created_at %></p>
-
+  <p>commnents(<%= post.comments.count %>)</p>
   <% if current_user == post.user %>
       <%= button_to "Edit", edit_post_path(post), :class => "button small", :method => :get %>
       <%= button_to "Delete", post, :confirm => "Are you sure?", :class => "button small", :method => :delete %>

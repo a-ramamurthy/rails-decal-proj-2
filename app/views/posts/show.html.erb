@@ -1,6 +1,7 @@
 <h1><%= @post.title %><%= link_to "back", posts_path %></h1>
 <p><%= @post.body %></p>
 <p>posted by: <%= @post.user.email %> | posted at: <%= @post.created_at %></p>
+<p>commnents(<%= @post.comments.count %>)</p>
 <% if current_user == @post.user %>
   <%= button_to "Edit", edit_post_path(@post), :class => "button small", :method => :get %>
 <% end %>

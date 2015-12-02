@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
       post = Post.find(params[:id])
       comment =  Comment.new(body: params[:comment][:body], post_id: post.id, user_id: current_user.id)
       comment.save
-      redirect_to posts_path
+      redirect_to post_path(post)
 
   end
 

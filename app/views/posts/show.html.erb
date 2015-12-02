@@ -4,3 +4,13 @@
 <% if current_user == @post.user %>
   <%= button_to "Edit", edit_post_path(@post), :class => "button small", :method => :get %>
 <% end %>
+
+<%= simple_form_for @comment, :url => create_comment_path(@post), :method => :post do |comment|%>
+<%= comment.input :body, label: "Comment: " %>
+<%= comment.button :submit%>
+<% end %>
+
+<% @comments.each do |comment| %>
+  <p><%= comment.user.email %> | <%= comment.created_at %></p>
+  <p><%= comment.body %> </p>
+<% end %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   root to: 'posts#index'
   devise_for :users
   resources :users, :posts
@@ -10,7 +12,16 @@ Rails.application.routes.draw do
   put "posts/:id", to: "posts#update", as: 'update_post'
   delete "posts", to: "posts#destroy", as: 'destroy_post'
 
+  post 'posts/:id', to: "comments#create", as: 'create_comment'
+
+  get 'comments/edit'
+
+  get 'comments/delete'
+
   get "posts/:id/edit", to: "posts#edit"
+
+
+
 
 
 end

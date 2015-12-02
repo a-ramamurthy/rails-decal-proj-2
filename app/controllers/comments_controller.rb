@@ -8,9 +8,19 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    @comment = Comment.find(params[:id])
+    render "edit"
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    @comment.update(comment_params)
+    @comment.save
+    redirect_to @comment.post
   end
 
   def delete
+
   end
 
   def comment_params

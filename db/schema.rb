@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120031930) do
+ActiveRecord::Schema.define(version: 20151202042429) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "body"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20151120031930) do
     t.string   "name"
     t.integer  "year_started"
     t.integer  "year_ended"
+    t.string   "organization"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

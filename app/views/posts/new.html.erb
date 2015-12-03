@@ -1,5 +1,7 @@
 <%= simple_form_for @post, :url => create_path(), :method => :post do |post|%>
 <%= post.input :title, label: "Title: " %>
+<%= post.input :tags, label: "Tags: " %>
+<p>Enter a comma delimited list of tags.</p>
 <%= post.input :body, label: "Body: " %>
   <%= post.button :submit%>
 <% end %>

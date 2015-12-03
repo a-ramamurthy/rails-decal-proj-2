@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :comments, :through => :post
   has_and_belongs_to_many :tags
+  searchkick
+
 end

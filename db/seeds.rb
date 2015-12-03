@@ -12,7 +12,8 @@ initial_tags = Tag.create([{name: 'public_relations', description: "Manages comm
 						   {name: 'current_member'},
 						   {name: 'alumni'},
 						   {name: 'president'},
-						   {name: 'fundraising'}])
+						   {name: 'fundraising'},
+						   {name: 'social'}])
 
 initial_users = User.create!([{name: 'Alice', email: 'alice@berkeley.edu', password: 'hunter123', password_confirmation: 'hunter123', year_started: 2014, year_ended: nil,  organization: "Rowing"},
 							  {name: 'Bob', email: 'bob@berkeley.edu', password: 'hunter123', password_confirmation: 'hunter123', year_started: 2015, year_ended: nil,  organization: "Rowing"},
@@ -30,8 +31,8 @@ initial_posts = Post.create([{title: "BBQ on Friday!", body: "Please bring at le
 							 {title: "Competition Practice Tips", body: "Post any tips for the upcoming meet! Here's mine: Don't forget to stretch before every race!", user_id: initial_users[1].id},
 							 {title: "Help needed!", body: "I need advice on raising money for the club. Does anyone have any experience in this?", user_id: initial_users[0].id}])
 
-initial_posts[0].tags << initial_tags[0]
-initial_posts[2].tags << initial_tags[1]
+initial_posts[0].tags << initial_tags[0] << initial_tags[5]
+initial_posts[2].tags << initial_tags[4]
 
 initial_comments = Comment.create([{body: "So excited!", user_id: initial_users[1].id, post_id: initial_posts[0].id},
 								   {body: "Eat a couple of bananas the morning of, and pasta the night before.", user_id: initial_users[1].id, post_id: initial_posts[1].id},

@@ -1,0 +1,5 @@
+<%= simple_form_for @tag, :url => create_tag_path(), :method => :tag do |tag|%>
+<%= tag.input :name, label: "Name: " %>
+<%= tag.input :description, label: "Description: " %>
+  <%= tag.button :submit%>
+<% end %>

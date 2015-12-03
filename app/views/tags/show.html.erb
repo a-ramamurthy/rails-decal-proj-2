@@ -1,0 +1,11 @@
+<h3><%= @tag.name %></h3>
+<p><%= @tag.description if @tag.description %></p>
+<h1>Related Users:</h1>
+<% @users.each do |user| %>
+	<p><%= link_to user.email, user %>
+<% end %>
+<h1>Related Posts</h1>
+<% @posts.each do |post| %>
+  <p><%= link_to post.title, @post %> </p>
+<% end %>
+<%= button_to("Add Tag", add_existing_tag_path(@tag), :class => "button large", :method => :put) unless current_user.tags.include? @tag %> 

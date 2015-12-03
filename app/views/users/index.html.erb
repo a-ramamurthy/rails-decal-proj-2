@@ -6,7 +6,8 @@
         <tbody>
           <% @users.each do |user| %>
             <tr>
-              <%= render user %>
+
+              <%= render user if user.organization == current_user.organization%>
             </tr>
           <% end %>
         </tbody>

@@ -1,8 +1,16 @@
-<h3>User</h3>
-<p>Name: <%= @user.name if @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
-<h2>User's Posts</h2>
+<h3><%= @user.name if @user.name %></h3>
+<p> <%= @user.email if @user.email %></p>
+<h4>Tags:</h4>
+<% @tags.each do |tag| %>
+  <p><%= link_to tag.name, tag %> </p>
+  <% end %>
+<% if current_user == @user %>
+<%= button_to "New Tag", add_tag_path(), :class => "button large", :method => :get %>
+<% end %>
+<h4>Posts:</h4>
 <% @posts.each do |post| %>
-
-  <p><%= post.body %> </p>
+  <p><%= link_to post.title, post %> </p>
+<% end %>
+<% if current_user == @user %>
+<%= button_to "New Post", new_path(), :class => "button large", :method => :get %>
 <% end %>

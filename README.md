@@ -4,7 +4,7 @@ __Title:__ Lum
 
 __Team Members:__ Arun Ramamurthy, Akash Khosla, Han Chen, Kangsik Lee
 
-__Demo Link:__
+__Demo Link:__ https://www.youtube.com/watch?v=x72SoJa1Qaw
 
 __Idea:__ A web application for clubs and student organizations dedicated to fostering relationships between current organization members and organization alumni. Users can make and comment on posts and send private messages. Users are tagged with their current status, either member or alumni, which years they served for, and the projects and positions that are/were associated with them.
 
@@ -22,12 +22,12 @@ Post
 * Has: title, body, (many) Tags, user_id
 
 __Features:__
-* Users can log in, create comments directed to specific subsets of Users, choose and search for tags, create new tags
-* Tags can be searched to find all Users associated with that Tag
+* Users can log in, create comments directed to specific subsets of Users via tagging, choose to add existing tags to posts and their own profile, create new tags, create posts
+* Posts can be searched to find all posts containing some keyword
 
 __Division of Labor:__
-* Arun:
-* Akash:
-* Han:
-* Kangsik
+* Arun:concept development, implemented tags
+* Akash:HTML styling, implemented searching
+* Han:Added models, debugging
+* Kangsik:Implemented comments and posts
 

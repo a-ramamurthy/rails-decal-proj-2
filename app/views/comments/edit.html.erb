@@ -2,5 +2,5 @@
 
 <%= simple_form_for @comment, :url => update_comment_path(@comment), :method => :put do |comment|%>
 <%= comment.input :body, label: "comment: " %>
-  <%= comment.button :submit%>
+  <%= comment.button :submit, class: 'btn btn-primary' %>
 <% end %>

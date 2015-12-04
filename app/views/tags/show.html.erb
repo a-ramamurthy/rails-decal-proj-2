@@ -8,4 +8,4 @@
 <% @posts.each do |post| %>
   <p><%= link_to post.title, post %> </p>
 <% end %>
-<%= button_to("Add Tag", add_existing_tag_path(@tag), :class => "button large", :method => :put) unless current_user.tags.include? @tag %>
+<%= button_to("Add Tag", add_existing_tag_path(@tag), class: 'btn btn-primary', :method => :put) unless current_user.tags.include? @tag %>
